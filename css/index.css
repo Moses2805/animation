@@ -1,0 +1,141 @@
+body{
+    background-color: #ccc;
+}
+.work{
+    width: 1170px;
+    margin: 0 auto;
+}
+*{
+    box-sizing: border-box;
+}
+.work .up{
+    height: 150px;
+}
+.work .up h1{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+.work .up h1 span{
+    font-family: 'Dancing Script', cursive;
+    background-color: rgb(231, 60, 17);
+    padding: 5px;
+    color: white;
+    border-radius: 4px;
+}
+.work .up .up-info{
+    text-align: center;
+    color: rgb(105, 105, 105);
+}
+.work .down .item{
+    position: relative;
+    width: 22%;
+    float: left;
+    height: 300px;
+    background: rgb(230, 225, 235);
+    margin-right: 20px;
+    border-radius: 3px;
+    transition: all 0.7s;
+}
+.work .down .item .name{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Raleway', sans-serif;
+}
+.work .down .item span{
+    position: absolute;
+    top: 150px;
+    left: 111px;
+    font-size: 33px;
+    color: rgb(231, 60, 17);
+}
+.work .down .item::before{
+    position: absolute;
+    content: '';
+    top: 8px;
+    left: 8px;
+    width: 45px;
+    height: 55px;
+    border-left: solid 2px rgb(231, 60, 17);
+    border-top: solid 2px rgb(231, 60, 17);
+    border-right: solid 2px transparent;
+    border-bottom: solid 2px transparent;
+}
+.work .down .item .info{
+    position: absolute;
+    opacity: 0;
+    font-size: 14px;
+    top: 188px;
+    left: 10px;
+    color: rgb(107, 135, 212);
+    font-family: 'Raleway', sans-serif;
+}
+.work .down .item::after{
+    position: absolute;
+    content: '';
+    bottom: 8px;
+    right: 8px;
+    width: 45px;
+    height: 55px;
+    border-right: solid 2px rgb(231, 60, 17);
+    border-bottom: solid 2px rgb(231, 60, 17);
+    border-left: solid 2px transparent;
+    border-top: solid 2px transparent;
+}
+@keyframes animate__bounceInUp{
+    from{
+        top: 150px;
+    }
+    to{
+        top: 80px;
+    }
+}
+@keyframes animate__bounceInDown{
+    from{
+        padding-top: 100px;
+    }
+    to{
+        padding-top: 115px;
+    }
+}
+@keyframes animate__zoomIn{
+    from{
+        top: 188px;
+    }
+    to{
+        top: 182px;
+    }
+}
+.work .down .item:hover span{
+    animation-name: animate__bounceInUp;
+    animation-duration: 0.4s;
+    color: white;
+    animation-fill-mode: forwards;
+}
+.work .down .item:hover .name{
+    animation-name: animate__bounceInDown;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    color: white;
+}
+.work .down .item:hover .info{
+    opacity: 1;
+    animation-name: animate__zoomIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    color: white;
+}
+.work .down .item:hover{
+    background: rgb(231, 60, 17);
+    transform: scale(1.05);
+}
+.work .down .item:hover::before{
+    border-left: solid 2px white;
+    border-top: solid 2px white;
+    transition: 0.8s;
+}
+.work .down .item:hover::after{
+    border-right: solid 2px white;
+    border-bottom: solid 2px white;
+    transition: 0.8s;
+}
